@@ -1,0 +1,229 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --body-bg: #1e1e1e;
+  --body-color: #e1e1e1;
+  --card-bg: #3d3d3d;
+  --fire: #e4604d;
+  --grass: #9dd465;
+  --electric: #f9e45f;
+  --water: #6a83d6;
+  --ground: #e4c967;
+  --rock: #cabb7b;
+  --fairy: #eeb2fa;
+  --poison: #9f619d;
+  --bug: #c5cf4a;
+  --dragon: #857af7;
+  --psychic: #e56eaf;
+  --flying: #80a4f9;
+  --fighting: #9b5a48;
+  --normal: #bab8ab;
+}
+
+.bg-fire {
+  background: linear-gradient(to top right, var(--fire), var(--card-bg) 25%);
+}
+.fire {
+  background-color: var(--fire);
+}
+
+.bg-grass {
+  background: linear-gradient(to top right, var(--grass), var(--card-bg) 25%);
+}
+.grass {
+  background-color: var(--grass);
+}
+
+.bg-electric {
+  background: linear-gradient(to top right, var(--electric), var(--card-bg) 25%);
+}
+.electric {
+  background-color: var(--electric);
+}
+
+.bg-water {
+  background: linear-gradient(to top right, var(--water), var(--card-bg) 25%);
+}
+.water {
+  background-color: var(--water);
+}
+
+.bg-ground {
+  background: linear-gradient(to top right, var(--ground), var(--card-bg) 25%);
+}
+.ground {
+  background-color: var(--ground);
+}
+
+.bg-rock {
+  background: linear-gradient(to top right, var(--rock), var(--card-bg) 25%);
+}
+.rock {
+  background-color: var(--rock);
+}
+
+.bg-fairy {
+  background: linear-gradient(to top right, var(--fairy), var(--card-bg) 25%);
+}
+.fairy {
+  background-color: var(--fairy);
+}
+
+.bg-poison {
+  background: linear-gradient(to top right, var(--poison), var(--card-bg) 25%);
+}
+.poison {
+  background-color: var(--poison);
+}
+
+.bg-bug {
+  background: linear-gradient(to top right, var(--bug), var(--card-bg) 25%);
+}
+.bug {
+  background-color: var(--bug);
+}
+
+.bg-dragon {
+  background: linear-gradient(to top right, var(--dragon), var(--card-bg) 25%);
+}
+.dragon {
+  background-color: var(--dragon);
+}
+
+.bg-psychic {
+  background: linear-gradient(to top right, var(--psychic), var(--card-bg) 25%);
+}
+.psychic {
+  background-color: var(--psychic);
+}
+
+.bg-flying {
+  background: linear-gradient(to top right, var(--flying), var(--card-bg) 25%);
+}
+.flying {
+  background-color: var(--flying);
+}
+
+.bg-fighting {
+  background: linear-gradient(to top right, var(--fighting), var(--card-bg) 25%);
+}
+.fighting {
+  background-color: var(--fighting);
+}
+
+.bg-normal {
+  background: linear-gradient(to top right, var(--normal), var(--card-bg) 25%);
+}
+.normal {
+  background-color: var(--normal);
+}
+
+body {
+  background-color: var(--body-bg);
+  color: var(--body-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: calc(25% - 20px);
+  margin: 10px;
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(173, 172, 172);
+  border-radius: 10px;
+  background-color: var(--card-bg);
+}
+.card:hover {
+  cursor: pointer;
+}
+
+.card .title h2 {
+  padding: 0;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.card .img {
+  margin: 40px auto;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background-size: 400% 400%;
+  background-position: 0 0;
+  animation: bg-out 300ms ease-in forwards 1;
+}
+.card:hover .img {
+  animation: bg-in 300ms ease-in forwards 1;
+}
+
+.card .img img {
+  max-width: 220px;
+}
+.card .type {
+  color: var(--body-bg);
+  border-radius: 10px;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 4px;
+}
+
+.card .type p {
+  margin: 0;
+}
+
+.card .favorite {
+  display: none;
+}
+
+@media screen and (max-width: 1244px) {
+  .card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: calc(100% - 20px);
+  }
+}
+
+@keyframes bg-in {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+@keyframes bg-out {
+  0% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
